@@ -9,8 +9,6 @@ namespace PetShop
     public class Printer : IPrinter
     {
         
-
-        //enum choice { PrintAllPets, AddPet, DeletePet, UpdatePet, SearchPetByType, SortPetsByPrice, ListFiveCheapestPets  };
         private readonly IPetShopService _petShopService;
 
         public Printer(IPetShopService petShopService)
@@ -254,8 +252,8 @@ namespace PetShop
             Console.WriteLine($"Name: {pet.PetName}");
             Console.WriteLine($"Pet type: {pet.Type}");
             Console.WriteLine($"Color: {pet.Color}");
-            Console.WriteLine($"Birthdate: {pet.BirthDate}");
-            Console.WriteLine($"Sold at date: {pet.SoldDate}");
+            Console.WriteLine($"Birthdate: {pet.BirthDate.ToShortDateString()}");
+            Console.WriteLine($"Sold at date: {pet.SoldDate.ToShortDateString()}");
             Console.WriteLine($"Previous owner: {pet.PreviousOwner}");
             Console.WriteLine($"Pet price: {pet.Price} kroner.");
             Console.WriteLine("\n");
